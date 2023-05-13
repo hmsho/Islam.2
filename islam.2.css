@@ -4,59 +4,27 @@ body{
 	padding: 0;
 	font-family: 'Comfortaa', cursive;
     font-family: 'Josefin Sans', sans-serif;
-    color: #FFEFD5;
-
-
-
+    color: #FFEFD5; 
 }
-
-header{
-	margin: 50px;
-	text-align: center;
-
-}
-header img{
-	border: 7px solid #ffd700;
-	border-radius: 40px;
-	box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
-
-}
-
-header h1{
-	color: #FFD700 ;
-	font-size: 40px;
-}
-header p{
-	font-size: 25px;
-}
-.wrapper{
-	max-width: 700px;
-	margin: 0 auto;
-}
-
 nav{
 	background-color: #FFEFD5;
 	border: 5px solid #ffd700;
 	height: 100px;
 	width: 100%;
-	box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 5px 20px rgba(255, 255, 255, 0.5);
 	position: sticky;
 	top: 0;
 	overflow:hidden;
 }
-
 nav ul{
 	margin: 0;
 	padding: 0;
-
 }
-
 nav ul li{
 	margin: 0;
 	padding: 0;
 	display: block;
-	float: right;
-		
+	float: right;	
 }
 nav ul li a{
 	display: block;
@@ -69,6 +37,94 @@ nav ul li a{
 	color: #B8860B  ;
 	padding: 37.5px 70px;
 	line-height: 30px;
-	margin-right: 90px;
-	
+	margin-right: 90px;	
  }
+header{
+	margin: 50px;
+	text-align: center;
+}
+header img{
+	border: 7px solid #ffd700;
+	border-radius: 40px;
+	box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+	width: 450px;
+}
+header h1{
+	color: #FFD700 ;
+	font-size: 40px;
+}
+header p{
+	font-size: 25px;
+}
+.wrapper{
+	max-width: 700px;
+	margin: 0 auto;	
+}
+.sep{
+	background-color: #FFEFD5;
+	width: 50%;
+	border-radius: 40px;
+	height: 10px;
+	margin: 100px auto;
+	box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+	border: 3px solid #ffd700;
+	}
+.islam-facts h2{
+	text-align: center;
+	width: 218px;
+	color: #FFD700;
+	font-size: 40px;
+	padding: 10px;
+	border: 3px solid #ffd700;
+	box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+}
+.islam-facts img{
+	float: right;
+	border: 7px solid #ffd700;
+	border-radius: 40px;
+	box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+	width: 600px;
+	margin-top: -75px;
+}
+.islam-facts{	
+	margin: 40px;
+	padding: 20px;
+	font-size: 25px;
+}
+.islam-facts ul li{
+	padding: 10px;
+	margin: 10px;
+}
+.pray{
+	text-decoration: none;
+	color: #FFD700;
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+.pillers-of-islam h2{
+	color: #FFD700;
+	text-align: center;
+	border: 3px solid #ffd700;
+	box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+	text-align: center;
+	width: 670px;
+	margin: 0 auto;
+	padding: 15px;
+}
+.pillers-of-islam{
+	margin: 50px;
+	padding: 20px;
+	font-size: 25px;
+	text-align: center;
+}
+.pillers-of-islam p{
+	width: 900px;
+	margin: 0 auto;
+	padding: 40px;
+}
+.pillers-of-islam img{
+	border: 7px solid #ffd700;
+	border-radius: 40px;
+	box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+	width: 900px;
+	margin: 40px;
+}
