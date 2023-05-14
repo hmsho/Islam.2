@@ -6,6 +6,8 @@ const opensawmButtons = document.querySelectorAll('[data-sawm-target]')
 const closesawmButtons = document.querySelectorAll('[data-close-button]')
 const openzakatButtons = document.querySelectorAll('[data-zakat-target]')
 const closezakatButtons = document.querySelectorAll('[data-close-button]')
+const openhajjButtons = document.querySelectorAll('[data-hajj-target]')
+const closehajjButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 
 openshahadahButtons.forEach(button => {
@@ -53,21 +55,21 @@ overlay.addEventListener('click', () => {
 opensawmButtons.forEach(button => {
   button.addEventListener('click', () => {
     const sawm = document.querySelector(button.dataset.sawmTarget)
-    openShahadahModal(sawm)
+    openSawmModal(sawm)
   })
 })
 
 closesawmButtons.forEach(button => {
   button.addEventListener('click', () => {
     const sawm = button.closest('.sawm')
-    closeShahadahModal(sawm)
+    closeSawmModal(sawm)
   })
 })
 
 overlay.addEventListener('click', () => {
   const sawm = document.querySelector('.sawm.active')
   if (sawm) {
-    closeShahadahModal(sawm)
+    closeSawmModal(sawm)
   }
 })
 
@@ -85,10 +87,33 @@ closezakatButtons.forEach(button => {
   })
 })
 
+
 overlay.addEventListener('click', () => {
   const zakat = document.querySelector('.zakat.active')
   if (zakat) {
     closeZakatModal(zakat)
+  }
+})
+
+openhajjButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const hajj = document.querySelector(button.dataset.hajjTarget)
+    openHajjModal(hajj)
+  })
+})
+
+closehajjButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const hajj = button.closest('.hajj')
+    closeHajjModal(hajj)
+  })
+})
+
+
+overlay.addEventListener('click', () => {
+  const hajj = document.querySelector('.hajj.active')
+  if (zakat) {
+    closeZakatModal(hajj)
   }
 })
 
@@ -126,10 +151,11 @@ function closeSawmModal(sawm) {
   if (sawm == null) return
   sawm.classList.remove('active')
   overlay.classList.remove('active')
+}
 
-function openZawmModal(zakat) {
+function openZakatModal(zakat) {
   if (zakat == null) return
-  sawm.classList.add('active')
+  zakat.classList.add('active')
   overlay.classList.add('active')
 }
 
@@ -138,3 +164,15 @@ function closeZakatModal(zakat) {
   zakat.classList.remove('active')
   overlay.classList.remove('active')
 }
+function openHajjModal(hajj) {
+  if (hajj == null) return
+  hajj.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeHajjModal(hajj) {
+  if (hajj == null) return
+  hajj.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
