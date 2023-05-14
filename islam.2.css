@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body{
 	background-color: #222222 ;
 	margin: 0 auto;
@@ -44,7 +48,6 @@ nav ul li {
 
 nav ul li a {
   padding: 10px 20px;
-  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 }
 header{
 	margin: 50px;
@@ -151,57 +154,178 @@ header p{
 	margin: 40px auto;
 }
 
-.modal {
+
+
+.shahadah {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%) scale(0);
-	transition: 200ms ease-in-out;
+	transition: 300ms ease-in-out;
 	border: 1px solid black;
 	border-radius: 10px;
 	z-index: 10;
-	background-color: white;
-	width: 400px;
+	background-color: #212121;
+	width: 75%;
+	height: 75%;
 	max-width: 80%;
-
-
 }
 
+.shahadah-open-button {
+  background-color: transparent;
+  border: 3px solid #ffd700;
+  color: #ffd700;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
 
-.modal.active {
+.shahadah-open-button:hover {
+  background-color: #FFEFD5;
+  color: #212121;
+}
+
+.shahadah.active {
 	transform: translate(-50%,-50%) scale(1);
 }
 
-.modal-header {
-	padding: 10px 15px;
+
+
+.shahadah-header {
+	padding: 20px;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	border-bottom: 1px solid black;
-
-
-}
-
-.modal.header.title{
-	font-size: 1.25rem;
-	font-size: bold;
-
+	font-size: 50px;
+    color: #FFD700;
+    margin: 50px;
+    padding: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
 
-.modal-header .close-button {
-	cursor: pointer;
-	border: none;
-	outline: none;
-	background-color: none;
-	font-size: 1.25rem;
-	font-weight: bold;
-} 
+.shahadah.header.title{
+	font-size: 40px;
+
+}
 
 
-.model-body {
-	padding: 10px 15px;
 
+.shahadah-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 60px;
+  color: #ffd700; 
+}
+
+
+
+.shahadah-header .close-button:hover {
+  color: #FFEFD5; 
+}
+
+
+
+.shahadah-body {
+	padding: 20px 20px;
+	font-size: 25px;
+	margin: 40px 0;
+}
+
+
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+}
+
+
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+
+.salah {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	transition: 300ms ease-in-out;
+	border: 1px solid black;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: #212121;
+	width: 75%;
+	height: 75%;
+	max-width: 80%;
+}
+
+.salah-open-button {
+  background-color: transparent;
+  border: 3px solid #ffd700;
+  color: #ffd700;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.salah-open-button:hover {
+  background-color: #FFEFD5;
+  color: #212121;
+}
+
+.salah.active {
+	transform: translate(-50%,-50%) scale(1);
+}
+
+.salah-header {
+	padding: 30px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 50px;
+    color: #FFD700;
+    margin: 40px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.salah.header.title {
+	font-size: 40px;
+}
+
+.salah-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 60px;
+  color: #ffd700; 
+}
+
+.salah-header .close-button:hover {
+  color: #FFEFD5; 
+}
+
+.salah-body {
+	padding: 20px 20px;
+	font-size: 17px;
+	margin: 40px 0;
+}
+.salah-body b{
+	text-decoration: none;
+	color: #ffd700;
 }
 
 #overlay {
@@ -213,8 +337,205 @@ header p{
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.5);
 	pointer-events: none;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.zakat {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	transition: 300ms ease-in-out;
+	border: 1px solid black;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: #212121;
+	width: 75%;
+	height: 75%;
+	max-width: 80%;
+}
+
+.zakat-open-button {
+  background-color: transparent;
+  border: 3px solid #ffd700;
+  color: #ffd700;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.zakat-open-button:hover {
+  background-color: #FFEFD5;
+  color: #212121;
+}
+
+.zakat.active {
+	transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+.zakat-header {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 50px;
+    color: #FFD700;
+    margin: 50px;
+    padding: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.zakar.header.title{
+	font-size: 40px;
 
 }
+
+
+
+.zakat-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 60px;
+  color: #ffd700; 
+}
+
+
+
+.zakat-header .close-button:hover {
+  color: #FFEFD5; 
+}
+
+
+
+.zakat-body {
+	padding: 20px 20px;
+	font-size: 20px;
+	margin: 40px 0;
+}
+
+
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+}
+
+
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.zakat {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	transition: 300ms ease-in-out;
+	border: 1px solid black;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: #212121;
+	width: 75%;
+	height: 75%;
+	max-width: 80%;
+}
+
+.zakat-open-button {
+  background-color: transparent;
+  border: 3px solid #ffd700;
+  color: #ffd700;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.sawm-open-button:hover {
+  background-color: #FFEFD5;
+  color: #212121;
+}
+
+.sawm.active {
+	transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+.sawm-header {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 50px;
+    color: #FFD700;
+    margin: 50px;
+    padding: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.sawm.header.title{
+	font-size: 40px;
+
+}
+
+
+
+.sawm-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 60px;
+  color: #ffd700; 
+}
+
+
+
+.sawm-header .close-button:hover {
+  color: #FFEFD5; 
+}
+
+
+
+.sawm-body {
+	padding: 20px 20px;
+	font-size: 20px;
+	margin: 40px 0;
+}
+
+
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+}
+
+
 
 #overlay.active {
 	opacity: 1;
